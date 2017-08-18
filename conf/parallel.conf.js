@@ -1,6 +1,6 @@
 nightwatch_config = {
-  src_folders : [ "tests/single" ],
-  page_objects_path: "page_objects",
+  src_folders : [ "tests/Parallel" ],
+  page_objects_path: "PageObjects",
 
   selenium : {
     "start_process" : false,
@@ -11,8 +11,8 @@ nightwatch_config = {
   common_capabilities: {
     'build': 'nightwatch-browserstack',
     //Please provide brwoser stack credentials(username & key) for below configuration parameters
-    'browserstack.user': process.env.BROWSERSTACK_USERNAME || '<browsertack_user>',
-    'browserstack.key': process.env.BROWSERSTACK_ACCESS_KEY || '<browsertack_key>',
+      'browserstack.user': process.env.BROWSERSTACK_USERNAME || 'munikrishnarama1',
+      'browserstack.key': process.env.BROWSERSTACK_ACCESS_KEY || 'PjRxzFLnK31K1B8G7zpx',
     'browserstack.debug': true
   },
 
@@ -20,11 +20,13 @@ nightwatch_config = {
     default: {},
     chrome: {
       desiredCapabilities: {
+        os:"WINDOWS",
         browser: "chrome"
       }
     },
     firefox: {
       desiredCapabilities: {
+          os:"WINDOWS",
         browser: "firefox"
       }
     },
@@ -35,6 +37,7 @@ nightwatch_config = {
     },
     ie: {
       desiredCapabilities: {
+          os:"WINDOWS",
         browser: "internet explorer"
       }
     }
