@@ -3,18 +3,17 @@
   "output_folder": "reports",
   "custom_commands_path": "",
   "custom_assertions_path": "",
-  "page_objects_path": ["WebshopPageObjects"],
+  "page_objects_path": ["PageObjects"],
   "globals_path": "global.js",
   "selenium": {
     "start_process": true,
-    "server_path": "./lib/selenium/selenium-server-standalone-3.0.1.jar",
+    "server_path": "./lib/selenium-server-standalone-3.5.0.jar",
     "start_session": true,
     "log_path": "./log",
     "host": "127.0.0.1",
     "port": 4444,
     "cli_args": {
-      "webdriver.chrome.driver": "./bin/chromedriver.exe",
-      "webdriver.gecko.driver" : "./bin/geckodriver.exe"
+      "webdriver.chrome.driver": "./bin/chromedriver.exe"
     }
   },
   "test_settings": {
@@ -33,12 +32,6 @@
 		"acceptSslCerts": true
 
 	  }
-    },
-    "firefox" : {
-      "desiredCapabilities": {
-        "browserName": "chrome",
-		"marionette": true
-      }
     }
   }
 }

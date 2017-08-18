@@ -16,13 +16,28 @@ var BasePageCommands = {
         return browser.page.LoginPage()
     },
 
+    navigateToServicesPage: function(browser) {
+        this
+            .waitForElementVisible('@servicesPageLink',2000)
+            .click('@servicesPageLink')
+        return this
+    }
+
 }
 
 module.exports = {
-    url: 'http://demowebshop.tricentis.com',
+    url: 'https://expert360.com/',
     elements: {
         body: 'body',
-        loginPageLink: 'a[href$=login]'
+        title: 'title',
+        servicesPageLink: 'a[href$=services]',
+        howWeWorkPageLink: 'a[href$=how-it-works]',
+        caseStudiesPageLink: 'a[text()=Case studies]',
+        forExpertsPageLink: 'a[href=For Experts]',
+        blogPageLink: 'a[href=Blog]',
+        postAProjectPageLink: 'a[href=Services]',
+        loginPageLink: 'a[href$=login]',
+        signUpPageLink: 'a[href$=onboarding]'
     },
     commands: [BasePageCommands]
 }

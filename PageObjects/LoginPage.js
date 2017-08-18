@@ -17,17 +17,22 @@ var LoginPageCommands = {
             .waitForElementVisible('@login', 2000)
             .click('@login')
 
-        return browser.page.UserHomePage()
+        return this
     }
 }
 
 module.exports = {
-    url: 'http://demowebshop.tricentis.com',
+    url: '',
     elements: {
         body:       'body',
-        email:      '#Email',
-        password:   '#Password',
-        login:      'input.button-1.login-button'
+        title:      'title',
+        email:      'input[name=email]',
+        password:   'input[name=password]',
+        login:      'button[type=submit]',
+        loginErrorMessage: {
+            selector: '//div[@class="js-feedback-container"]//p',
+            locateStrategy: 'xpath'
+        }
     },
     commands: [LoginPageCommands]
 }
