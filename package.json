@@ -1,5 +1,5 @@
 {
-  "name": "nightwatchdemo",
+  "name": "nightwatchstandalone",
   "version": "1.0.0",
   "description": "",
   "main": "nightwatch.js",
@@ -7,9 +7,11 @@
     "test": "tests"
   },
   "dependencies": {
-    "nightwatch": "^0.9.12"
+    "nightwatch": "^0.9.12",
+    "nightwatch-html-reporter": "^2.0.0"
   },
   "devDependencies": {
+    "nightwatch": "^0.9.12"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
