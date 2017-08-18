@@ -13,10 +13,11 @@ nightwatch_config = {
       desiredCapabilities: {
         'build': 'nightwatch-browserstack',
         //Please provide brwoser stack credentials(username & key) for below configuration parameters
-        'browserstack.user': process.env.BROWSERSTACK_USERNAME || 'munikrishnarama1',
-        'browserstack.key': process.env.BROWSERSTACK_ACCESS_KEY || 'PjRxzFLnK31K1B8G7zpx',
+        'browserstack.user': process.env.BROWSERSTACK_USERNAME,
+        'browserstack.key': process.env.BROWSERSTACK_ACCESS_KEY,
         'browserstack.debug': true,
-        'browser': 'chrome'
+        'browser': 'chrome',
+          'os':'WINDOWS'
       }
     }
   }
