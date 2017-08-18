@@ -8,12 +8,12 @@ require('nightwatch-cucumber')({
 module.exports = {
     src_folders: ["tests"],
     custom_assertions_path: '',
-    page_objects_path: ["JupiterPageObjects"],
+    page_objects_path: ["PageObjects"],
     live_output: false,
     disable_colors: false,
     selenium: {
         start_process: true,
-        server_path: "./lib/selenium/selenium-server-standalone-3.0.1.jar",
+        server_path: "./lib/selenium-server-standalone-3.5.0.jar",
         log_path: '',
         host: '127.0.0.1',
         port: 4444,
