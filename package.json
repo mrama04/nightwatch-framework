@@ -6,8 +6,7 @@
   "scripts": {
     "test": "npm run single && npm run parallel",
     "single": "./node_modules/.bin/nightwatch -c conf/single.conf.js",
-    "parallel": "./node_modules/.bin/nightwatch -c conf/parallel.conf.js -e chrome,firefox,ie",
-    "suite": "./node_modules/.bin/nightwatch -c conf/suite.conf.js"
+    "parallel": "./node_modules/.bin/nightwatch -c conf/parallel.conf.js -e chrome,firefox,ie"
   },
   "repository": {
     "type": "git",

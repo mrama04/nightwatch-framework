@@ -14,9 +14,8 @@ module.exports = {
             .enterPassword()
             .submit()
             .waitForElementVisible('@loginErrorMessage',10000)
-            .getText('@loginErrorMessage',function(result) {
-                this.assert.equal(result.value, "Your email address or password was incorrect.");
-            })
+            .assert.containsText('@loginErrorMessage', "Your email address or password was incorrect.")
+
          return browser.end();
     },
 
